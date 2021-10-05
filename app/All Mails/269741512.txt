@@ -1,0 +1,11 @@
+Sender: 0101017c4b82884a-ee134f3b-d337-4a4c-a35c-f009f27b27aa-000000@us-west-2.amazonses.com
+To: x1y3uzbar1@1secmail.net
+Subject: Lalalai signing in
+Date: 2021-10-04 15:33:40
+Content: Click the link below to sign in to your Lalalai account.
+This link will expire in 24 hours and can only be used once.
+
+https://www.lalal.ai/auth/login/cb/?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IngxeTN1emJhcjFAMXNlY21haWwubmV0IiwiZXhwIjoxNjMzNDQwODE4LjEyNjA2NzksInN1YnNjcmliZWQiOmZhbHNlfQ.vOUIZ6lDNVdKK75pHI7s150ODECa2ttk3BfOBISdnJY
+
+If you did not make this request, you can safely ignore this email.
+
