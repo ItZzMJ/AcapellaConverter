@@ -44,9 +44,14 @@ class MailClass:
         return self.mail
 
     def generateMail(self):
+        self.domain = random.choice(self.domainList)
+
         newMail = f"{self.API}?login={self.generateUserName()}&domain={self.domain}"
         reqMail = requests.get(newMail)
         self.mail = f"{self.prefix}@{self.domain}"
+
+        print(f"Created new mail {self.mail}")
+
         return self.mail
 
     def checkMails(self):

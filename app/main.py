@@ -121,7 +121,7 @@ class Main:
             os.rename(os.path.join(BASEDIR, file), os.path.join(DOWNLOADPATH, file))
 
             self.mailer.deleteMail()
-            self.mailer.generateMail()
+            self.mailer = MailClass()
             self.driver.quit()
             self.create_browser()
 
