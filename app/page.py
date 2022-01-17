@@ -36,7 +36,7 @@ class MainPage(BasePage):
 
     def wait_for_processing(self):
         driver = self.driver
-        elem = WebDriverWait(driver, 120).until(
+        elem = WebDriverWait(driver, 240).until(
             lambda driver: driver.find_element(*MainPageLocators.SELECT_FREE_BUTTON))
 
         print("Element found!")

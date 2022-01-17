@@ -5,11 +5,12 @@ import requests
 from selenium import webdriver
 import page
 from MailClass import MailClass
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 CHROMEPATH = "/usr/bin/chromedriver"  # chromedriver path
-BASEDIR = "/home/jannik/Musik/NeueTracks#4/ConvertToAcapellas"  # dir were the music to convert is
-DOWNLOADPATH = "/home/jannik/Musik/NeueTracks#4/Acapellas"  # target dir for Acapellas
+BASEDIR = "/home/jannik/Musik/NeueTracks/ConvertToAcapellas"  # dir were the music to convert is
+DOWNLOADPATH = "/home/jannik/Musik/NeueTracks/Acapellas"  # target dir for Acapellas
 
 HIDECHROME = False  # wether the process in chrome browser is shown or not
 
@@ -50,7 +51,7 @@ class Main:
         link = None
 
         for line in splitted_content:
-            if "https://www.lalal.ai/" in line:
+            if "https://www.lalal.ai/" in line and "/?token=" in line:
                 link = line
                 print("Link found " + line + "\n")
                 break
@@ -104,7 +105,7 @@ class Main:
             options.add_argument("--headless")
             options.add_argument("--disable-gpu")
 
-        self.driver = webdriver.Chrome(CHROMEPATH, options=options)
+        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
         self.driver.set_window_position(1000, 0)
         self.driver.maximize_window()
